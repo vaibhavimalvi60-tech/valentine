@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valentine Surprise ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            width: 320px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #ff4d6d;
+            margin-bottom: 25px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .yes {
+            background: #ff4d6d;
+            color: white;
+        }
+
+        .no {
+            background: #999;
+            color: white;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .message {
+            margin-top: 25px;
+            font-size: 18px;
+            color: #ff4d6d;
+            display: none;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Do you love Tinu? ❤️</h1>
+
+    <button class="yes" onclick="yesClick()">YES</button>
+    <button class="no" onclick="noClick()">NO</button>
+
+    <div class="message" id="result"></div>
+</div>
+
+<script>
+    function yesClick() {
+        document.getElementById("result").style.display = "block";
+        document.getElementById("result").innerHTML =
+            "💖 Shantanu,<br>Happy Valentine’s Day my baby ❤️<br>— from Tinu 💕";
+    }
+
+    function noClick() {
+        document.getElementById("result").style.display = "block";
+        document.getElementById("result").innerHTML =
+            "Sorry 😔";
+    }
+</script>
+
+</body>
+</html>
